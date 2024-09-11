@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Header className="relative z-20" />
         <img
-          src="../src/assets/p4.jpg"
+          src="https://i.postimg.cc/xdzHNfFx/p4.webp"
           alt="Agricultural field"
           className="object-cover w-full h-full rounded-ss-3xl filter brightness-75"
           />

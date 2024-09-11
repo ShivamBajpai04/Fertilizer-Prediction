@@ -16,7 +16,7 @@ export default function PredictionForm() {
     location: "",
     crop: "",
   });
-  const [prediction, setPrediction] = useState<Number | null>(0);
+  const [prediction, setPrediction] = useState<Number | null>(null);
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
