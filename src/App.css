@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 #root {
   margin: 0 auto;
   text-align: center;
-  background: #17191a;
+  background: var(--bg);
 }
 
 * {
@@ -10,7 +12,7 @@
 }
 section {
   color: #fff;
-  background: #17191a;
+  background: var(--bg);
 }
 
 .logo {
@@ -49,22 +51,12 @@ section {
   color: #888;
 }
 
-.custom-shape-divider-bottom-1726044014 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
 
-.custom-shape-divider-bottom-1726044014 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 88px;
-}
-
-.custom-shape-divider-bottom-1726044014 .shape-fill {
-  fill: var(--wave-color);
+.onest-font {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }

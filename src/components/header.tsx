@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div
-      className={`px-4 lg:px-6 h-14 flex align-middle items-center bg-[#17191A] relative z-20}`}
+      className={`px-4 lg:px-6 h-14 flex align-middle items-center bg-[var(--bg)] relative z-20}`}
     >
       <a className="flex items-center justify-center" href="#">
         <span className="sr-only">Fertilizer Predictor</span>
