@@ -17,7 +17,7 @@ export default function LandingPage() {
           <Section
             id="features"
             title="Key Features"
-            bgColor="bg-gradient-to-b from-[var(--wave-color)] to-neutral-100"
+            bgColor="bg-gradient-to-b from-[var(--wave-color)] to-white"
           >
             <div className="flex gap-10 flex-wrap align-middle justify-around text-wrap max-w-full mx-auto">
               <FeatureCard
@@ -43,7 +43,7 @@ export default function LandingPage() {
           </Section>
         </div>
         <div className="snap-always snap-center">
-          <Section id="how-it-works" title="How It Works" bgColor="bg-green-50">
+          <Section id="how-it-works" title="How It Works" bgColor="">
             <div className="flex gap-10 flex-wrap align-middle justify-center">
               <FeatureCard
                 icon={

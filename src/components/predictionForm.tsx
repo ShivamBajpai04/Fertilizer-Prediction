@@ -16,7 +16,7 @@ export default function PredictionForm() {
     location: "",
     crop: "",
   });
-  const [prediction, setPrediction] = useState<Number | null>(null);
+  const [prediction, setPrediction] = useState<Number | null>(0);
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
@@ -102,7 +102,7 @@ export default function PredictionForm() {
             Prediction Result
           </h3>
           <p className="text-green-700">
-            Estimated fertilizer needed: {prediction} kg/acre
+            {`Estimated fertilizer needed: ${prediction} kg/acre`}
           </p>
         </div>
       )}
