@@ -1,17 +1,17 @@
 import Header from "./header";
 export default function Hero() {
   return (
-    <section className="w-full min-h-screen py-12 md:py-24 lg:py-32 xl:py-48 relative">
+    <section className="flex flex-col align-middle justify-center w-full min-h-screen py-12 md:py-24 lg:py-32 xl:py-48 relative">
       <div className="absolute inset-0 z-0">
-        <Header className="relative z-20" />
+        <Header />
         <img
           src="https://i.postimg.cc/xdzHNfFx/p4.webp"
           alt="Agricultural field"
-          className="object-cover w-full h-full rounded-ss-3xl rounded-e-3xl filter brightness-75"
-          />
+          className="object-cover w-full h-full rounded-tr-3xl filter brightness-75"
+        />
         {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
       </div>
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container m-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-4 text-center text-white">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
