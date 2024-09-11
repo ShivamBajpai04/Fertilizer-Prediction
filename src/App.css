@@ -1,12 +1,16 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  background: #17191a;
 }
 
 * {
   scroll-behavior: smooth;
-  scrollbar-width:none;
+  scrollbar-width: none;
+}
+section {
+  color: #fff;
+  background: #17191a;
 }
 
 .logo {

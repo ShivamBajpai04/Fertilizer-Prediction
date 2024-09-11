@@ -42,98 +42,98 @@ const priceByCompanyData = [
 
 export default function FertilizerCharts() {
   return (
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 px-5">
-        <Card className="col-span-4">
-          <CardHeader>
-            <CardTitle>Fertilizer Prices Over Time</CardTitle>
-            <CardDescription>
-              Monthly price trends for different fertilizer types
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <ResponsiveContainer width="100%" height={350}>
-              <LineChart data={priceOverTimeData}>
-                <XAxis
-                  dataKey="month"
-                  stroke="#888888"
-                  fontSize={12}
-                  tickLine={false}
-                  axisLine={false}
-                />
-                <YAxis
-                  stroke="#888888"
-                  fontSize={12}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(value) => `$${value}`}
-                />
-                <Tooltip />
-                <Line
-                  type="monotone"
-                  dataKey="Nitrogen"
-                  stroke="hsl(var(--chart-3))"
-                  strokeWidth={2}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="Phosphate"
-                  stroke="hsl(var(--chart-4))"
-                  strokeWidth={2}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="Potash"
-                  stroke="hsl(var(--chart-5))"
-                  strokeWidth={2}
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-        <Card className="col-span-3">
-          <CardHeader>
-            <CardTitle>Fertilizer Prices by Company</CardTitle>
-            <CardDescription>
-              Comparison of prices across different companies
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <ResponsiveContainer width="100%" height={350}>
-              <BarChart data={priceByCompanyData}>
-                <XAxis
-                  dataKey="company"
-                  stroke="#888888"
-                  fontSize={12}
-                  tickLine={false}
-                  axisLine={false}
-                />
-                <YAxis
-                  stroke="#888888"
-                  fontSize={12}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(value) => `$${value}`}
-                />
-                <Tooltip />
-                <Bar
-                  dataKey="Nitrogen"
-                  fill="hsl(var(--chart-1))"
-                  radius={[4, 4, 0, 0]}
-                />
-                <Bar
-                  dataKey="Phosphate"
-                  fill="hsl(var(--chart-2))"
-                  radius={[4, 4, 0, 0]}
-                />
-                <Bar
-                  dataKey="Potash"
-                  fill="hsl(var(--chart-3))"
-                  radius={[4, 4, 0, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-      </div>
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 px-5 dark">
+      <Card className="col-span-4">
+        <CardHeader>
+          <CardTitle>Specific fertilizer's Prices Over Time</CardTitle>
+          <CardDescription>
+            Monthly price trends for different fertilizer types
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pl-2">
+          <ResponsiveContainer width="100%" height={350}>
+            <LineChart data={priceOverTimeData}>
+              <XAxis
+                dataKey="month"
+                stroke="#888888"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
+              <YAxis
+                stroke="#888888"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `₹${value}`}
+              />
+              <Tooltip />
+              <Line
+                type="monotone"
+                dataKey="Nitrogen"
+                stroke="hsl(var(--chart-3))"
+                strokeWidth={2}
+              />
+              <Line
+                type="monotone"
+                dataKey="Phosphate"
+                stroke="hsl(var(--chart-4))"
+                strokeWidth={2}
+              />
+              <Line
+                type="monotone"
+                dataKey="Potash"
+                stroke="hsl(var(--chart-5))"
+                strokeWidth={2}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+      <Card className="col-span-3">
+        <CardHeader>
+          <CardTitle>Fertilizer Prices by Company</CardTitle>
+          <CardDescription>
+            Comparison of prices across different companies
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pl-2">
+          <ResponsiveContainer width="100%" height={350}>
+            <BarChart data={priceByCompanyData}>
+              <XAxis
+                dataKey="company"
+                stroke="#888888"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
+              <YAxis
+                stroke="#888888"
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `₹${value}`}
+              />
+              <Tooltip />
+              <Bar
+                dataKey="Nitrogen"
+                fill="hsl(var(--chart-1))"
+                radius={[4, 4, 0, 0]}
+              />
+              <Bar
+                dataKey="Phosphate"
+                fill="hsl(var(--chart-2))"
+                radius={[4, 4, 0, 0]}
+              />
+              <Bar
+                dataKey="Potash"
+                fill="hsl(var(--chart-3))"
+                radius={[4, 4, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

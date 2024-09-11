@@ -1,6 +1,6 @@
 export default function Header({ className = "" }) {
   return (
-    <div className={`px-4 lg:px-6 h-14 flex items-center bg-white ${className}`}>
+    <div className={`px-4 lg:px-6 h-14 flex items-center bg-[#17191A] ${className}`}>
       <a className="flex items-center justify-center" href="#">
         <span className="sr-only">Fertilizer Predictor</span>
         <svg

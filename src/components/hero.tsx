@@ -7,7 +7,7 @@ export default function Hero() {
         <img
           src="https://i.postimg.cc/xdzHNfFx/p4.webp"
           alt="Agricultural field"
-          className="object-cover w-full h-full rounded-ss-3xl filter brightness-75"
+          className="object-cover w-full h-full rounded-ss-3xl rounded-e-3xl filter brightness-75"
           />
         {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
       </div>

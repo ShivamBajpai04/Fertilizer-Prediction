@@ -17,7 +17,7 @@ export default function LandingPage() {
           <Section
             id="features"
             title="Key Features"
-            bgColor="bg-gradient-to-b from-[var(--wave-color)] to-white"
+            bgColor="bg-[var(--wave-color)]"
           >
             <div className="flex gap-10 flex-wrap align-middle justify-around text-wrap max-w-full mx-auto">
               <FeatureCard

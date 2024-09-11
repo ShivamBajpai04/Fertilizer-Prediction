@@ -32,11 +32,11 @@ export default function PredictionForm() {
     setPrediction(parseInt(simulatedPrediction.toFixed(2)));
   };
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-      <div>
+    <form onSubmit={handleSubmit} className="w-80 mx-auto space-y-4 text-black">
+      <div className="min-w-40">
         <label
           htmlFor="landSize"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Land Size (in acres)
         </label>
@@ -53,7 +53,7 @@ export default function PredictionForm() {
       <div>
         <label
           htmlFor="location"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Location
         </label>
@@ -70,7 +70,7 @@ export default function PredictionForm() {
       <div>
         <label
           htmlFor="crop"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Crop
         </label>
