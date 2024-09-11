@@ -12,12 +12,12 @@ export default function Section({
   bgColor,
 }: SectionProps) {
   return (
-    <section id={id} className={`w-full py-12 md:py-24 lg:py-32 ${bgColor}`}>
-      <div className="container mx-auto">
+    <section id={id} className={`w-full relative min-h-screen ${bgColor}`}>
+      <div className="container mx-auto min-h-screen flex flex-col justify-center align-middle">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
           {title}
         </h2>
-        {children}
+        <div className="flex flex-col align-middle justify-center">{children}</div>
       </div>
     </section>
   );

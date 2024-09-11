@@ -1,13 +1,15 @@
+import Header from "./header";
 export default function Hero() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative">
+    <section className="w-full min-h-screen py-12 md:py-24 lg:py-32 xl:py-48 relative">
       <div className="absolute inset-0 z-0">
+        <Header className="relative z-20" />
         <img
           src="../src/assets/p4.jpg"
           alt="Agricultural field"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          className="object-cover w-full h-full rounded-ss-3xl filter brightness-75"
+          />
+        {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-4 text-center text-white">
@@ -37,6 +39,19 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      {/* <div className="custom-shape-divider-bottom-1726044014">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div> */}
     </section>
   );
 }
