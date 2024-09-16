@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 const cropOptions = [
@@ -16,20 +17,53 @@ export default function PredictionForm() {
     location: "",
     crop: "",
   });
-  const [prediction, setPrediction] = useState<Number | null>(null);
+  const [prediction, setPrediction] = useState<String | null>(null);
 
   const handleInputChange = (e: any) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+    if (name == "landSize") {
+      if (value < 0) {
+        value = 0;
+        return;
+      }
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const simulatedPrediction = Math.random() * 100;
-    setPrediction(parseInt(simulatedPrediction.toFixed(2)));
+    let data = JSON.stringify({
+      temperature: 0,
+      humidity: 0,
+      moisture: 0,
+      soilType: 0,
+      cropType: 0,
+      nitrogen: 0,
+      potassium: 0,
+      phosphorous: 0,
+    });
+
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "https://fertilizertypebysm.onrender.com/fertilizername",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data.Fertilizername));
+        setPrediction(response.data.Fertilizername);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <form onSubmit={handleSubmit} className="w-80 mx-auto space-y-4 text-black">
@@ -68,10 +102,7 @@ export default function PredictionForm() {
         />
       </div>
       <div>
-        <label
-          htmlFor="crop"
-          className="block text-sm font-medium text-white"
-        >
+        <label htmlFor="crop" className="block text-sm font-medium text-white">
           Crop
         </label>
         <select
