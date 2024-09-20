@@ -1,4 +1,4 @@
-// import Header from "./header";
+import React from "react";
 import FeatureCard from "./featureCard";
 import Section from "./section";
 import PredictionForm from "./predictionForm";
@@ -6,7 +6,7 @@ import Footer from "./footer";
 import Hero from "./hero";
 import FertilizerCharts from "./fertilizer-charts";
 
-export default function LandingPage() {
+const LandingPage: React.FC = () => {
   return (
     <main className="flex-1">
       <div className="snap-y snap-mandatory overflow-y-scroll h-screen">
@@ -14,11 +14,7 @@ export default function LandingPage() {
           <Hero />
         </div>
         <div className="snap-always snap-center">
-          <Section
-            id="features"
-            title="Key Features"
-            bgColor="bg-[var(--wave-color)]"
-          >
+          <Section id="features" title="Key Features">
             <div className="flex gap-10 flex-wrap align-middle justify-around text-wrap max-w-full mx-auto">
               <FeatureCard
                 icon={
@@ -43,7 +39,7 @@ export default function LandingPage() {
           </Section>
         </div>
         <div className="snap-always snap-center">
-          <Section id="how-it-works" title="How It Works" bgColor="">
+          <Section id="how-it-works" title="How It Works">
             <div className="flex gap-10 flex-wrap align-middle justify-center">
               <FeatureCard
                 icon={
@@ -76,11 +72,7 @@ export default function LandingPage() {
           </Section>
         </div>
         <div className="snap-always snap-center">
-          <Section
-            id="predict"
-            title="Predict Your Fertilizer Needs"
-            bgColor="bg-white"
-          >
+          <Section id="predict" title="Predict Your Fertilizer Needs" bgColor="bg-white">
             <PredictionForm />
           </Section>
         </div>
@@ -93,4 +85,6 @@ export default function LandingPage() {
       </div>
     </main>
   );
-}
+};
+
+export default LandingPage;

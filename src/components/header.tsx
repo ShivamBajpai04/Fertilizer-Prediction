@@ -1,8 +1,8 @@
-export default function Header() {
+import React from "react";
+
+const Header: React.FC = () => {
   return (
-    <div
-      className={`px-4 lg:px-6 h-14 flex align-middle items-center bg-[var(--bg)] relative z-20}`}
-    >
+    <div className="px-4 lg:px-6 h-14 flex items-center bg-[var(--bg)] relative z-20">
       <a className="flex items-center justify-center" href="#">
         <span className="sr-only">Fertilizer Predictor</span>
         <svg
@@ -44,4 +44,6 @@ export default function Header() {
       </nav>
     </div>
   );
-}
+};
+
+export default Header;

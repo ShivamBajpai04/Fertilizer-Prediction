@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Bar,
   BarChart,
@@ -40,7 +41,7 @@ const priceByCompanyData = [
   { company: "Company E", Nitrogen: 318, Phosphate: 272, Potash: 222 },
 ];
 
-export default function FertilizerCharts() {
+const FertilizerCharts: React.FC = () => {
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7 px-5 dark">
       <Card className="col-span-4">
@@ -136,4 +137,6 @@ export default function FertilizerCharts() {
       </Card>
     </div>
   );
-}
+};
+
+export default FertilizerCharts;
